@@ -7,7 +7,10 @@ import {
   Truck, 
   DollarSign, 
   Users2,
-  ArrowRight
+  ArrowRight,
+  Shield,
+  Wrench,
+  Heart
 } from "lucide-react";
 
 const solutions = [
@@ -46,6 +49,24 @@ const solutions = [
     title: "Project System (PS)",
     description: "Deliver projects on time and within budget with comprehensive project management capabilities.",
     features: ["Project Management", "Resource Allocation", "Cost Tracking", "Project Analytics"]
+  },
+  {
+    icon: Shield,
+    title: "Quality Management (QM)",
+    description: "Ensure product quality and compliance with comprehensive quality control systems.",
+    features: ["Quality Control", "Inspections", "Compliance", "Quality Analytics"]
+  },
+  {
+    icon: Wrench,
+    title: "Plant Maintenance (PM)",
+    description: "Optimize asset performance with preventive maintenance and asset management tools.",
+    features: ["Asset Management", "Maintenance Scheduling", "Work Orders", "Equipment Tracking"]
+  },
+  {
+    icon: Heart,
+    title: "Customer Relationship Management (CRM)",
+    description: "Build stronger customer relationships with integrated CRM and service management.",
+    features: ["Lead Management", "Customer Service", "Sales Pipeline", "Contact Management"]
   }
 ];
 
@@ -65,22 +86,6 @@ const Solutions = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From finance to manufacturing, our modular ERP system adapts to your industry needs with specialized solutions for every business function.
           </p>
-        </div>
-
-        {/* Additional Modules */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-            <h4 className="text-lg font-semibold text-foreground mb-2">Quality Management (QM)</h4>
-            <p className="text-sm text-muted-foreground">Quality Control, Inspections, Compliance</p>
-          </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-            <h4 className="text-lg font-semibold text-foreground mb-2">Plant Maintenance (PM)</h4>
-            <p className="text-sm text-muted-foreground">Asset Management, Maintenance Scheduling</p>
-          </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-            <h4 className="text-lg font-semibold text-foreground mb-2">Customer Relationship Management (CRM)</h4>
-            <p className="text-sm text-muted-foreground">Lead Management, Customer Service</p>
-          </div>
         </div>
 
         {/* Solutions Grid */}
