@@ -20,14 +20,14 @@ const Hero = () => {
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Transform Your 
+              Transform Your Enterprise with
               <span className="block bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
-                Business Operations
+                Feebee Technologies ERP
               </span>
             </h1>
             
             <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-lg">
-              Streamline processes, boost productivity, and drive growth with our comprehensive ERP platform trusted by 10,000+ enterprises worldwide.
+              Comprehensive enterprise resource planning system designed to manage core business processes across all departments with integrated modules for complete operational control.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

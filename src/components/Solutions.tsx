@@ -13,39 +13,39 @@ import {
 const solutions = [
   {
     icon: DollarSign,
-    title: "Financial Management",
+    title: "Financial Management (FIN)",
     description: "Complete financial control with automated accounting, budgeting, and real-time financial reporting.",
-    features: ["General Ledger", "Accounts Payable/Receivable", "Financial Reporting", "Budget Planning"]
-  },
-  {
-    icon: Factory,
-    title: "Manufacturing",
-    description: "Optimize production processes from planning to delivery with advanced manufacturing capabilities.",
-    features: ["Production Planning", "Quality Control", "Inventory Management", "Shop Floor Control"]
+    features: ["General Ledger", "AP/AR", "Asset Accounting", "Financial Reporting"]
   },
   {
     icon: Users2,
-    title: "Human Resources",
+    title: "Human Capital Management (HCM)",
     description: "Streamline HR processes and empower your workforce with comprehensive people management tools.",
-    features: ["Payroll Management", "Performance Tracking", "Recruitment", "Employee Self-Service"]
+    features: ["HR Management", "Payroll", "Performance Management", "Employee Self-Service"]
+  },
+  {
+    icon: Factory,
+    title: "Materials Management (MM)",
+    description: "Optimize inventory and procurement processes with advanced materials management capabilities.",
+    features: ["Procurement", "Inventory Control", "Warehouse Management", "Vendor Management"]
   },
   {
     icon: ShoppingCart,
-    title: "Supply Chain",
-    description: "End-to-end supply chain visibility and control from procurement to customer delivery.",
-    features: ["Procurement", "Vendor Management", "Demand Planning", "Order Management"]
-  },
-  {
-    icon: Truck,
-    title: "Logistics & Distribution",
-    description: "Optimize your distribution network with advanced warehouse and transportation management.",
-    features: ["Warehouse Management", "Transportation", "Route Optimization", "Tracking & Tracing"]
+    title: "Sales & Distribution (SD)",
+    description: "End-to-end sales process management from order to delivery with integrated customer service.",
+    features: ["Order Management", "Billing", "Customer Service", "Sales Analytics"]
   },
   {
     icon: Building2,
-    title: "Project Management",
+    title: "Production Planning (PP)",
+    description: "Advanced manufacturing execution with integrated production planning and BOM management.",
+    features: ["Manufacturing", "MES", "BOM Management", "Production Scheduling"]
+  },
+  {
+    icon: Truck,
+    title: "Project System (PS)",
     description: "Deliver projects on time and within budget with comprehensive project management capabilities.",
-    features: ["Resource Planning", "Time Tracking", "Cost Management", "Project Analytics"]
+    features: ["Project Management", "Resource Allocation", "Cost Tracking", "Project Analytics"]
   }
 ];
 
@@ -65,6 +65,22 @@ const Solutions = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             From finance to manufacturing, our modular ERP system adapts to your industry needs with specialized solutions for every business function.
           </p>
+        </div>
+
+        {/* Additional Modules */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <h4 className="text-lg font-semibold text-foreground mb-2">Quality Management (QM)</h4>
+            <p className="text-sm text-muted-foreground">Quality Control, Inspections, Compliance</p>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <h4 className="text-lg font-semibold text-foreground mb-2">Plant Maintenance (PM)</h4>
+            <p className="text-sm text-muted-foreground">Asset Management, Maintenance Scheduling</p>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <h4 className="text-lg font-semibold text-foreground mb-2">Customer Relationship Management (CRM)</h4>
+            <p className="text-sm text-muted-foreground">Lead Management, Customer Service</p>
+          </div>
         </div>
 
         {/* Solutions Grid */}
