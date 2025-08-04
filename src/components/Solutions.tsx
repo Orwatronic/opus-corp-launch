@@ -1,0 +1,128 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { 
+  Building2, 
+  ShoppingCart, 
+  Factory, 
+  Truck, 
+  DollarSign, 
+  Users2,
+  ArrowRight
+} from "lucide-react";
+
+const solutions = [
+  {
+    icon: DollarSign,
+    title: "Financial Management",
+    description: "Complete financial control with automated accounting, budgeting, and real-time financial reporting.",
+    features: ["General Ledger", "Accounts Payable/Receivable", "Financial Reporting", "Budget Planning"]
+  },
+  {
+    icon: Factory,
+    title: "Manufacturing",
+    description: "Optimize production processes from planning to delivery with advanced manufacturing capabilities.",
+    features: ["Production Planning", "Quality Control", "Inventory Management", "Shop Floor Control"]
+  },
+  {
+    icon: Users2,
+    title: "Human Resources",
+    description: "Streamline HR processes and empower your workforce with comprehensive people management tools.",
+    features: ["Payroll Management", "Performance Tracking", "Recruitment", "Employee Self-Service"]
+  },
+  {
+    icon: ShoppingCart,
+    title: "Supply Chain",
+    description: "End-to-end supply chain visibility and control from procurement to customer delivery.",
+    features: ["Procurement", "Vendor Management", "Demand Planning", "Order Management"]
+  },
+  {
+    icon: Truck,
+    title: "Logistics & Distribution",
+    description: "Optimize your distribution network with advanced warehouse and transportation management.",
+    features: ["Warehouse Management", "Transportation", "Route Optimization", "Tracking & Tracing"]
+  },
+  {
+    icon: Building2,
+    title: "Project Management",
+    description: "Deliver projects on time and within budget with comprehensive project management capabilities.",
+    features: ["Resource Planning", "Time Tracking", "Cost Management", "Project Analytics"]
+  }
+];
+
+const Solutions = () => {
+  return (
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-medium mb-4">
+            Business Solutions
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            Tailored Solutions for
+            <span className="block text-accent">Every Department</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            From finance to manufacturing, our modular ERP system adapts to your industry needs with specialized solutions for every business function.
+          </p>
+        </div>
+
+        {/* Solutions Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {solutions.map((solution, index) => (
+            <Card 
+              key={index} 
+              className="group hover:shadow-hover transition-all duration-300 border-0 shadow-card hover:-translate-y-2"
+            >
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300 mb-4">
+                    <solution.icon className="w-8 h-8 text-accent" />
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    {solution.title}
+                  </h3>
+                  
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {solution.description}
+                  </p>
+                </div>
+
+                <ul className="space-y-2 mb-6">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-foreground mb-4">
+            Need a Custom Solution?
+          </h3>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Our team of experts can help you design a tailored ERP solution that perfectly fits your unique business requirements.
+          </p>
+          <Button variant="cta" size="xl">
+            Speak with an Expert
+            <ArrowRight className="w-5 h-5" />
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Solutions;
