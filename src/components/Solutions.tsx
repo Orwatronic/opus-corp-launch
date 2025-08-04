@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { 
   Building2, 
   ShoppingCart, 
@@ -119,10 +120,19 @@ const Solutions = () => {
                   ))}
                 </ul>
 
-                <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
+{solution.title.includes("CRM") ? (
+                  <Link to="/crm" className="w-full">
+                    <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
+                      Learn More
+                      <ArrowRight className="w-4 h-4" />
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}
